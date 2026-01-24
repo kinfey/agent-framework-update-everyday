@@ -1,5 +1,7 @@
 # Agent Framework Daily Updates
 
+![bg](./imgs/bg.png)
+
 Automated daily tracking of [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) changes using **GitHub Copilot CLI** and **GitHub Copilot SDK**.
 
 ## Overview
@@ -25,18 +27,7 @@ This project automatically analyzes merged Pull Requests from Microsoft Agent Fr
 
 ### Architecture
 
-```
-┌─────────────────────┐     ┌──────────────────────┐     ┌─────────────────┐
-│   GitHub Action     │────▶│  GitHub Copilot CLI  │────▶│  Copilot Skill  │
-│   (Scheduled Cron)  │     │  + Copilot SDK       │     │  (PR Analyzer)  │
-└─────────────────────┘     └──────────────────────┘     └─────────────────┘
-                                      │
-                                      ▼
-                            ┌──────────────────────┐
-                            │   Blog Post Output   │
-                            │   (Markdown files)   │
-                            └──────────────────────┘
-```
+![arch](./imgs/arch.png)
 
 ### GitHub Action Workflow Steps
 
